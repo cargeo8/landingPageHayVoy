@@ -74,7 +74,7 @@
             </div>
             
             <!-- Navigation -->
-            <header class="container mx-auto px-6 py-6">
+            <header class="sticky top-0 z-40 container mx-auto px-6 py-6">
                 <nav class="flex items-center justify-between backdrop-blur-md bg-black/20 rounded-2xl px-6 py-4 border border-white/10 shadow-lg shadow-black/20 transition-all duration-300 hover:bg-black/30 hover:border-white/20">
                     <div class="flex items-center space-x-2">
                         <div class="w-10 h-10 bg-gradient-to-br from-slate-600 to-slate-800 rounded-lg flex items-center justify-center animate-float">
