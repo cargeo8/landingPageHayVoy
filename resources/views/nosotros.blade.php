@@ -150,6 +150,8 @@
                 <span class="px-6 py-3 bg-gradient-to-r from-red-500/20 to-pink-500/20 border border-red-500/30 rounded-xl text-white font-semibold">Angular</span>
                 <span class="px-6 py-3 bg-gradient-to-r from-emerald-500/20 to-teal-500/20 border border-emerald-500/30 rounded-xl text-white font-semibold">Vue.js</span>
                 <span class="px-6 py-3 bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-xl text-white font-semibold">.NET</span>
+                <span class="px-6 py-3 bg-gradient-to-r from-orange-500/20 to-red-500/20 border border-orange-500/30 rounded-xl text-white font-semibold">Java</span>
+                <span class="px-6 py-3 bg-gradient-to-r from-green-600/20 to-emerald-600/20 border border-green-600/30 rounded-xl text-white font-semibold">Django</span>
                 <span class="px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-xl text-white font-semibold">Tailwind CSS</span>
                 <span class="px-6 py-3 bg-gradient-to-r from-green-500/20 to-teal-500/20 border border-green-500/30 rounded-xl text-white font-semibold">Android</span>
                 <span class="px-6 py-3 bg-gradient-to-r from-slate-500/20 to-gray-500/20 border border-slate-500/30 rounded-xl text-white font-semibold">iOS</span>

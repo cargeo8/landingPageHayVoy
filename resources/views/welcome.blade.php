@@ -495,6 +495,46 @@
                                         </svg>
                                     </a>
                                 </div>
+
+                                <!-- Business Intelligence -->
+                                <div class="group bg-black/30 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-purple-400/40 hover:shadow-xl hover:shadow-black/40 transition-all duration-500 hover:-translate-y-1">
+                                    <div class="w-16 h-16 bg-gradient-to-br from-slate-600 to-slate-800 rounded-xl mb-6 flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                                        <svg class="w-8 h-8 group-hover:text-purple-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                                        </svg>
+                                    </div>
+                                    <h3 class="text-2xl font-bold mb-4">Business Intelligence</h3>
+                                    <p class="text-gray-400 mb-6">
+                                        Transforma tus datos en decisiones estratégicas. Implementamos soluciones de BI 
+                                        que visualizan y analizan la información crítica de tu negocio.
+                                    </p>
+                                    <ul class="space-y-3 mb-6">
+                                        <li class="flex items-center text-gray-300">
+                                            <svg class="w-5 h-5 text-cyan-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width=2 d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                            </svg>
+                                            Dashboards interactivos
+                                        </li>
+                                        <li class="flex items-center text-gray-300">
+                                            <svg class="w-5 h-5 text-cyan-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width=2 d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                            </svg>
+                                            Análisis predictivo
+                                        </li>
+                                        <li class="flex items-center text-gray-300">
+                                            <svg class="w-5 h-5 text-cyan-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width=2 d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                            </svg>
+                                            Reportes automatizados
+                                        </li>
+                                    </ul>
+                                    <a href="#contacto" class="text-cyan-400 hover:text-cyan-300 font-semibold flex items-center group">
+                                        Más información
+                                        <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width=2 d="M9 5l7 7-7 7" />
+                                        </svg>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </section>
@@ -555,6 +595,8 @@
                                                     <span class="px-3 py-1 bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-full text-xs text-red-400 hover:border-red-500/50 transition-colors cursor-default">Angular</span>
                                                     <span class="px-3 py-1 bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-full text-xs text-emerald-400 hover:border-emerald-500/50 transition-colors cursor-default">Vue.js</span>
                                                     <span class="px-3 py-1 bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-full text-xs text-purple-400 hover:border-purple-500/50 transition-colors cursor-default">.NET</span>
+                                                    <span class="px-3 py-1 bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-full text-xs text-orange-400 hover:border-orange-500/50 transition-colors cursor-default">Java</span>
+                                                    <span class="px-3 py-1 bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-full text-xs text-emerald-500 hover:border-emerald-500/50 transition-colors cursor-default">Django</span>
                                                     <span class="px-3 py-1 bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-full text-xs text-orange-400 hover:border-orange-500/50 transition-colors cursor-default">Tailwind</span>
                                                     <span class="px-3 py-1 bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-full text-xs text-green-400 hover:border-green-500/50 transition-colors cursor-default">Android</span>
                                                     <span class="px-3 py-1 bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-full text-xs text-slate-300 hover:border-slate-400/50 transition-colors cursor-default">iOS</span>
