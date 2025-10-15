@@ -79,10 +79,10 @@
                     </div>
                     
                     <div class="hidden md:flex items-center space-x-8">
-                        <a href="#servicios" class="text-gray-300 hover:text-white transition-colors">
+                        <a href="{{ route('servicios') }}" class="text-gray-300 hover:text-white transition-colors">
                             Servicios
                     </a>
-                    <a href="#about" class="text-gray-300 hover:text-white transition-colors">
+                    <a href="{{ route('nosotros') }}" class="text-gray-300 hover:text-white transition-colors">
                         Nosotros
                     </a>
                     <a href="#contacto" class="text-gray-300 hover:text-white transition-colors">
@@ -691,22 +691,22 @@
                                 </div>
                                 
                                 <div>
-                                    <h3 class="font-semibold mb-4">Servicios</h3>
+                                    <h3 class="text-white font-semibold mb-4">Servicios</h3>
                                     <ul class="space-y-2 text-gray-400">
-                                        <li><a href="#servicios" class="hover:text-cyan-400 transition-colors">CollectHub</a></li>
-                                        <li><a href="#servicios" class="hover:text-cyan-400 transition-colors">Desarrollo Web</a></li>
-                                        <li><a href="#servicios" class="hover:text-cyan-400 transition-colors">Apps Móviles</a></li>
-                                        <li><a href="#servicios" class="hover:text-cyan-400 transition-colors">Consultoría</a></li>
+                                        <li><a href="{{ route('servicios') }}#collecthub" class="hover:text-cyan-400 transition-colors">CollectHub</a></li>
+                                        <li><a href="{{ route('servicios') }}#desarrollo-web" class="hover:text-cyan-400 transition-colors">Desarrollo Web</a></li>
+                                        <li><a href="{{ route('servicios') }}#apps-moviles" class="hover:text-cyan-400 transition-colors">Apps Móviles</a></li>
+                                        <li><a href="{{ route('servicios') }}#consultoria" class="hover:text-cyan-400 transition-colors">Consultoría</a></li>
                                     </ul>
                                 </div>
                                 
                                 <div>
-                                    <h3 class="font-semibold mb-4">Empresa</h3>
+                                    <h3 class="text-white font-semibold mb-4">Empresa</h3>
                                     <ul class="space-y-2 text-gray-400">
-                                        <li><a href="#about" class="hover:text-cyan-400 transition-colors">Nosotros</a></li>
+                                        <li><a href="{{ route('nosotros') }}" class="hover:text-cyan-400 transition-colors">Nosotros</a></li>
                                         <li><a href="#contacto" class="hover:text-cyan-400 transition-colors">Contacto</a></li>
-                                        <li><a href="#" class="hover:text-cyan-400 transition-colors">Privacidad</a></li>
-                                        <li><a href="#" class="hover:text-cyan-400 transition-colors">Términos</a></li>
+                                        <li><a href="{{ route('privacidad') }}" class="hover:text-cyan-400 transition-colors">Privacidad</a></li>
+                                        <li><a href="{{ route('terminos') }}" class="hover:text-cyan-400 transition-colors">Términos</a></li>
                                     </ul>
                                 </div>
                             </div>
