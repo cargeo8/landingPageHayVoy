@@ -27,6 +27,31 @@
         </div>
 
         <div class="relative z-10">
+            <!-- Sticky CTA Flotante -->
+            <div x-data="{ showStickyCTA: false }" @scroll.window="showStickyCTA = window.scrollY > 800">
+                <div 
+                    x-show="showStickyCTA"
+                    x-transition:enter="transition ease-out duration-300"
+                    x-transition:enter-start="opacity-0 translate-y-4"
+                    x-transition:enter-end="opacity-100 translate-y-0"
+                    x-transition:leave="transition ease-in duration-200"
+                    x-transition:leave-start="opacity-100 translate-y-0"
+                    x-transition:leave-end="opacity-0 translate-y-4"
+                    class="fixed bottom-8 right-8 z-50"
+                    x-cloak
+                >
+                    <a 
+                        href="#contacto" 
+                        class="group flex items-center gap-3 px-6 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full shadow-2xl hover:shadow-cyan-500/50 transition-all duration-300 hover:scale-110"
+                    >
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+                        </svg>
+                        <span class="font-semibold whitespace-nowrap">¡Hablemos!</span>
+                    </a>
+                </div>
+            </div>
+            
             <!-- Navigation -->
             <header class="container mx-auto px-6 py-6">
                 <nav class="flex items-center justify-between backdrop-blur-md bg-black/20 rounded-2xl px-6 py-4 border border-white/10 shadow-lg shadow-black/20 transition-all duration-300 hover:bg-black/30 hover:border-white/20">
@@ -74,17 +99,25 @@
             <!-- Hero Section -->
             <section class="container mx-auto px-6 py-20 lg:py-32">
                 <div class="max-w-5xl mx-auto text-center">
-                    <div class="mb-6 inline-block px-4 py-2 bg-cyan-500/10 border border-cyan-500/30 rounded-full text-cyan-400 text-sm">
+                    <div class="mb-6 inline-flex items-center gap-2 px-4 py-2 bg-cyan-500/10 border border-cyan-500/30 rounded-full text-cyan-400 text-sm animate-pulse-subtle">
+                        <span class="relative flex h-2 w-2">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2 w-2 bg-cyan-500"></span>
+                        </span>
                         🇸🇻 Tecnología salvadoreña de clase mundial
                     </div>
                     
                     <h1 class="text-5xl lg:text-7xl font-bold mb-8 leading-tight">
-                        Soluciones tecnológicas 
+                        <span class="bg-gradient-to-r from-white via-slate-200 to-white bg-clip-text text-transparent animate-gradient">
+                            Soluciones tecnológicas 
+                        </span>
                         <span class="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent">
                             personalizadas
                         </span>
                         <br>
-                        que impulsan tu negocio
+                        <span class="bg-gradient-to-r from-white via-slate-200 to-white bg-clip-text text-transparent animate-gradient">
+                            que impulsan tu negocio
+                        </span>
                     </h1>
                     
                     <p class="text-xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
@@ -95,15 +128,19 @@
                     <div class="flex flex-col sm:flex-row items-center justify-center gap-4" x-data="{ isVideoOpen: false }">
                         <a
                             href="#contacto"
-                            class="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 text-lg font-semibold group"
+                            class="group px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 text-lg font-semibold relative overflow-hidden hover:scale-105"
                         >
-                            Comencemos
-                            <span class="inline-block ml-2 group-hover:translate-x-1 transition-transform">→</span>
+                            <span class="absolute inset-0 bg-gradient-to-r from-blue-500 to-cyan-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                            <span class="relative">Comencemos</span>
+                            <span class="relative inline-block ml-2 group-hover:translate-x-1 transition-transform">→</span>
                         </a>
                         <button
                             @click="isVideoOpen = true"
-                            class="px-8 py-4 border border-cyan-500/50 rounded-lg hover:bg-cyan-500/10 transition-all duration-300 text-lg font-semibold"
+                            class="group px-8 py-4 border border-cyan-500/50 rounded-lg hover:bg-cyan-500/10 transition-all duration-300 text-lg font-semibold hover:border-cyan-400 hover:shadow-xl"
                         >
+                            <svg class="inline-block w-5 h-5 mr-2 group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"/>
+                            </svg>
                             Ver demo
                         </button>
 
@@ -250,9 +287,13 @@
                                 <div class="flex flex-wrap gap-4">
                                     <a
                                         href="#contacto"
-                                        class="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 font-semibold"
+                                        class="group px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 font-semibold relative overflow-hidden hover:scale-105"
                                     >
-                                        Solicitar Demo
+                                        <span class="absolute inset-0 bg-gradient-to-r from-blue-500 to-cyan-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                                        <span class="relative">Solicitar Demo</span>
+                                        <svg class="w-5 h-5 ml-2 inline-block relative group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                                        </svg>
                                     </a>
                                     @auth
                                         <a
@@ -267,9 +308,9 @@
                         </div>
 
                         <!-- Development Service -->
-                        <div class="bg-black/30 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-cyan-400/40 hover:shadow-xl hover:shadow-black/40 transition-all duration-500 hover:-translate-y-1">
-                                    <div class="w-16 h-16 bg-gradient-to-br from-slate-700 to-slate-900 rounded-xl mb-6 flex items-center justify-center">
-                                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <div class="group bg-black/30 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-cyan-400/40 hover:shadow-xl hover:shadow-black/40 transition-all duration-500 hover:-translate-y-1">
+                                    <div class="w-16 h-16 bg-gradient-to-br from-slate-700 to-slate-900 rounded-xl mb-6 flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                                        <svg class="w-8 h-8 group-hover:text-cyan-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width=2 d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                                         </svg>
                                     </div>
@@ -307,9 +348,9 @@
                         </div>
 
                         <!-- Mobile Apps Service -->
-                        <div class="bg-black/30 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-purple-400/40 hover:shadow-xl hover:shadow-black/40 transition-all duration-500 hover:-translate-y-1">
-                                    <div class="w-16 h-16 bg-gradient-to-br from-slate-600 to-slate-800 rounded-xl mb-6 flex items-center justify-center">
-                                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <div class="group bg-black/30 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-purple-400/40 hover:shadow-xl hover:shadow-black/40 transition-all duration-500 hover:-translate-y-1">
+                                    <div class="w-16 h-16 bg-gradient-to-br from-slate-600 to-slate-800 rounded-xl mb-6 flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                                        <svg class="w-8 h-8 group-hover:text-purple-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width=2 d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
                                         </svg>
                                     </div>
@@ -347,9 +388,9 @@
                         </div>
 
                         <!-- Consulting Service -->
-                        <div class="bg-black/30 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-emerald-400/40 hover:shadow-xl hover:shadow-black/40 transition-all duration-500 hover:-translate-y-1">
-                                    <div class="w-16 h-16 bg-gradient-to-br from-slate-700 to-slate-900 rounded-xl mb-6 flex items-center justify-center">
-                                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <div class="group bg-black/30 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-emerald-400/40 hover:shadow-xl hover:shadow-black/40 transition-all duration-500 hover:-translate-y-1">
+                                    <div class="w-16 h-16 bg-gradient-to-br from-slate-700 to-slate-900 rounded-xl mb-6 flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                                        <svg class="w-8 h-8 group-hover:text-emerald-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width=2 d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                                         </svg>
                                     </div>
@@ -387,9 +428,9 @@
                         </div>
 
                         <!-- Custom Solutions Service -->
-                        <div class="bg-black/30 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-orange-400/40 hover:shadow-xl hover:shadow-black/40 transition-all duration-500 hover:-translate-y-1">
-                                    <div class="w-16 h-16 bg-gradient-to-br from-slate-600 to-slate-800 rounded-xl mb-6 flex items-center justify-center">
-                                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <div class="group bg-black/30 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-orange-400/40 hover:shadow-xl hover:shadow-black/40 transition-all duration-500 hover:-translate-y-1">
+                                    <div class="w-16 h-16 bg-gradient-to-br from-slate-600 to-slate-800 rounded-xl mb-6 flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                                        <svg class="w-8 h-8 group-hover:text-orange-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width=2 d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
                                         </svg>
                                     </div>
@@ -450,16 +491,16 @@
                                         tecnologías para crear productos que superan expectativas.
                                     </p>
                                     <div class="grid grid-cols-3 gap-6">
-                                        <div class="text-center">
-                                            <div class="text-3xl font-bold text-cyan-400 mb-2">15+</div>
+                                        <div class="text-center transform hover:scale-110 transition-transform duration-300">
+                                            <div class="text-3xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-2">15+</div>
                                             <div class="text-sm text-gray-400">Proyectos</div>
                                         </div>
-                                        <div class="text-center">
-                                            <div class="text-3xl font-bold text-cyan-400 mb-2">10+</div>
+                                        <div class="text-center transform hover:scale-110 transition-transform duration-300">
+                                            <div class="text-3xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-2">10+</div>
                                             <div class="text-sm text-gray-400">Clientes</div>
                                         </div>
-                                        <div class="text-center">
-                                            <div class="text-3xl font-bold text-cyan-400 mb-2">100%</div>
+                                        <div class="text-center transform hover:scale-110 transition-transform duration-300">
+                                            <div class="text-3xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-2">100%</div>
                                             <div class="text-sm text-gray-400">Satisfacción</div>
                                         </div>
                                     </div>
@@ -559,10 +600,11 @@
                                 <div class="text-center pt-8 border-t border-slate-700">
                                     <a
                                         href="mailto:hayvoy@hayvoy.com?subject=Consulta sobre servicios"
-                                        class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 text-lg font-semibold group"
+                                        class="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 text-lg font-semibold relative overflow-hidden hover:scale-105"
                                     >
-                                        Enviar mensaje
-                                        <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <span class="absolute inset-0 bg-gradient-to-r from-blue-500 to-cyan-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                                        <span class="relative">Enviar mensaje</span>
+                                        <svg class="w-5 h-5 ml-2 relative group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width=2 d="M14 5l7 7m0 0l-7 7m7-7H3" />
                                         </svg>
                                     </a>
@@ -666,6 +708,35 @@
             }
             
             .animate-float {
+                animation: float 3s ease-in-out infinite;
+            }
+            
+            @keyframes gradient {
+                0%, 100% {
+                    background-position: 0% 50%;
+                }
+                50% {
+                    background-position: 100% 50%;
+                }
+            }
+            
+            .animate-gradient {
+                background-size: 200% 200%;
+                animation: gradient 3s ease infinite;
+            }
+            
+            @keyframes pulse-subtle {
+                0%, 100% {
+                    opacity: 1;
+                }
+                50% {
+                    opacity: 0.85;
+                }
+            }
+            
+            .animate-pulse-subtle {
+                animation: pulse-subtle 2s ease-in-out infinite;
+            }
                 animation: float 3s ease-in-out infinite;
             }
             
