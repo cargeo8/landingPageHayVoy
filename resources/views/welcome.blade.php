@@ -74,20 +74,21 @@
             </div>
             
             <!-- Navigation -->
-            <header class="sticky top-0 z-40 container mx-auto px-6 py-6">
-                <nav class="flex items-center justify-between backdrop-blur-md bg-black/20 rounded-2xl px-6 py-4 border border-white/10 shadow-lg shadow-black/20 transition-all duration-300 hover:bg-black/30 hover:border-white/20">
-                    <div class="flex items-center space-x-2">
-                        <div class="w-10 h-10 bg-gradient-to-br from-slate-600 to-slate-800 rounded-lg flex items-center justify-center animate-float">
-                            <span class="text-white font-bold text-xl">H</span>
+            <header class="sticky top-0 z-40 w-full">
+                <div class="container mx-auto px-6 py-6">
+                    <nav class="flex items-center justify-between backdrop-blur-md bg-black/20 rounded-2xl px-6 py-4 border border-white/10 shadow-lg shadow-black/20 transition-all duration-300 hover:bg-black/30 hover:border-white/20">
+                        <div class="flex items-center space-x-2">
+                            <div class="w-10 h-10 bg-gradient-to-br from-slate-600 to-slate-800 rounded-lg flex items-center justify-center animate-float">
+                                <span class="text-white font-bold text-xl">H</span>
+                            </div>
+                            <span class="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                                hayvoy
+                            </span>
                         </div>
-                        <span class="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                            hayvoy
-                        </span>
-                    </div>
-                    
-                    <div class="hidden md:flex items-center space-x-8">
-                        <a href="#servicios" class="text-gray-300 hover:text-white transition-colors">
-                            Servicios
+                        
+                        <div class="hidden md:flex items-center space-x-8">
+                            <a href="#servicios" class="text-gray-300 hover:text-white transition-colors">
+                                Servicios
                         </a>
                         <a href="#about" class="text-gray-300 hover:text-white transition-colors">
                             Nosotros
@@ -115,6 +116,7 @@
                         @endauth
                     </div>
                 </nav>
+                </div>
             </header>
 
             <!-- Hero Section -->
