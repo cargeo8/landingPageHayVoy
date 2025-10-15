@@ -17,11 +17,11 @@
     <style>html { scroll-behavior: smooth; }</style>
 </head>
 <body>
-    <div class="bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white min-h-screen relative overflow-hidden">
+    <div class="bg-gradient-to-br from-slate-950 via-slate-900 to-black text-white min-h-screen relative overflow-hidden">
         <!-- Animated Background Elements -->
         <div class="absolute inset-0 overflow-hidden pointer-events-none">
-            <div class="absolute top-0 left-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
-            <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+            <div class="absolute top-0 left-1/4 w-96 h-96 bg-slate-700/5 rounded-full blur-3xl animate-pulse"></div>
+            <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-slate-600/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
             <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] border border-cyan-500/10 rounded-full"></div>
             <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] border border-cyan-500/10 rounded-full"></div>
         </div>
@@ -29,9 +29,9 @@
         <div class="relative z-10">
             <!-- Navigation -->
             <header class="container mx-auto px-6 py-6">
-                <nav class="flex items-center justify-between">
+                <nav class="flex items-center justify-between backdrop-blur-md bg-black/20 rounded-2xl px-6 py-4 border border-white/10 shadow-lg shadow-black/20 transition-all duration-300 hover:bg-black/30 hover:border-white/20">
                     <div class="flex items-center space-x-2">
-                        <div class="w-10 h-10 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center">
+                        <div class="w-10 h-10 bg-gradient-to-br from-slate-600 to-slate-800 rounded-lg flex items-center justify-center animate-float">
                             <span class="text-white font-bold text-xl">H</span>
                         </div>
                         <span class="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
@@ -112,9 +112,9 @@
                             x-show="isVideoOpen" 
                             x-cloak
                             @click="isVideoOpen = false"
-                            class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-6"
+                            class="fixed inset-0 bg-black/90 backdrop-blur-xl z-50 flex items-center justify-center p-6"
                         >
-                            <div class="max-w-4xl w-full bg-slate-900 rounded-2xl p-8 relative" @click.stop>
+                            <div class="max-w-4xl w-full bg-black/60 backdrop-blur-2xl border border-white/20 rounded-2xl p-8 relative hover:border-white/30 transition-all duration-300" @click.stop>
                                 <button
                                     @click="isVideoOpen = false"
                                     aria-label="Cerrar modal de video"
@@ -132,12 +132,11 @@
                     </div>
 
                     <!-- 3D Visual Elements -->
-                    <div class="mt-20 relative">
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent z-10"></div>
+                    <div class="mt-20 mb-8">
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                            <div class="transform hover:scale-105 transition-transform duration-300">
-                                <div class="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-xl p-8 hover:border-cyan-500/50 transition-colors">
-                                    <div class="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-lg mb-4 flex items-center justify-center">
+                            <div class="transform hover:scale-105 transition-all duration-500 animate-fade-in" style="animation-delay: 0.1s">
+                                <div class="h-full bg-gradient-to-br from-black/40 to-slate-900/40 backdrop-blur-xl border border-white/10 rounded-xl p-8 hover:border-white/30 hover:shadow-xl hover:shadow-black/40 transition-all duration-300">
+                                    <div class="w-16 h-16 bg-gradient-to-br from-slate-600 to-slate-800 rounded-lg mb-4 flex items-center justify-center mx-auto">
                                         <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
                                         </svg>
@@ -146,9 +145,9 @@
                                     <p class="text-gray-400">Entregas rápidas sin comprometer calidad</p>
                                 </div>
                             </div>
-                            <div class="transform hover:scale-105 transition-transform duration-300">
-                                <div class="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-xl p-8 hover:border-cyan-500/50 transition-colors">
-                                    <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-lg mb-4 flex items-center justify-center">
+                            <div class="transform hover:scale-105 transition-all duration-500 animate-fade-in" style="animation-delay: 0.3s">
+                                <div class="h-full bg-gradient-to-br from-black/40 to-slate-900/40 backdrop-blur-xl border border-white/10 rounded-xl p-8 hover:border-white/30 hover:shadow-xl hover:shadow-black/40 transition-all duration-300">
+                                    <div class="w-16 h-16 bg-gradient-to-br from-slate-700 to-slate-900 rounded-lg mb-4 flex items-center justify-center mx-auto">
                                         <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
                                         </svg>
@@ -157,9 +156,9 @@
                                     <p class="text-gray-400">Crecemos junto a tu empresa</p>
                                 </div>
                             </div>
-                            <div class="transform hover:scale-105 transition-transform duration-300">
-                                <div class="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-xl p-8 hover:border-cyan-500/50 transition-colors">
-                                    <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg mb-4 flex items-center justify-center">
+                            <div class="transform hover:scale-105 transition-all duration-500 animate-fade-in" style="animation-delay: 0.5s">
+                                <div class="h-full bg-gradient-to-br from-black/40 to-slate-900/40 backdrop-blur-xl border border-white/10 rounded-xl p-8 hover:border-white/30 hover:shadow-xl hover:shadow-black/40 transition-all duration-300">
+                                    <div class="w-16 h-16 bg-gradient-to-br from-slate-600 to-slate-700 rounded-lg mb-4 flex items-center justify-center mx-auto">
                                         <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                                         </svg>
@@ -187,7 +186,7 @@
 
                     <div class="grid gap-8 lg:grid-cols-2">
                         <!-- CollectHub - Featured Service -->
-                        <div class="lg:col-span-2 bg-gradient-to-br from-cyan-500/10 via-blue-500/10 to-purple-500/10 backdrop-blur-sm border border-cyan-500/30 rounded-2xl p-8 lg:p-12 hover:border-cyan-500/50 transition-all duration-300 relative overflow-hidden group">
+                        <div class="lg:col-span-2 bg-gradient-to-br from-black/30 via-slate-900/30 to-black/40 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-8 lg:p-12 hover:border-cyan-400/40 hover:shadow-2xl hover:shadow-black/50 transition-all duration-500 relative overflow-hidden group animate-fade-in">
                             <div class="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                             <div class="relative z-10">
                                 <div class="flex items-start justify-between mb-6">
@@ -205,7 +204,7 @@
                                             todo el proceso de cobro de tu empresa con una solución moderna y eficiente.
                                         </p>
                                     </div>
-                                    <div class="hidden lg:flex w-20 h-20 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-2xl items-center justify-center transform rotate-12 group-hover:rotate-0 transition-transform flex-shrink-0 ml-6">
+                                    <div class="hidden lg:flex w-20 h-20 bg-gradient-to-br from-slate-700 to-slate-900 rounded-2xl items-center justify-center transform rotate-12 group-hover:rotate-0 transition-transform flex-shrink-0 ml-6">
                                         <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
                                         </svg>
@@ -268,8 +267,8 @@
                         </div>
 
                         <!-- Development Service -->
-                        <div class="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-8 hover:border-cyan-500/50 transition-all duration-300">
-                                    <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-xl mb-6 flex items-center justify-center">
+                        <div class="bg-black/30 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-cyan-400/40 hover:shadow-xl hover:shadow-black/40 transition-all duration-500 hover:-translate-y-1">
+                                    <div class="w-16 h-16 bg-gradient-to-br from-slate-700 to-slate-900 rounded-xl mb-6 flex items-center justify-center">
                                         <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width=2 d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                                         </svg>
@@ -308,8 +307,8 @@
                         </div>
 
                         <!-- Mobile Apps Service -->
-                        <div class="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-8 hover:border-cyan-500/50 transition-all duration-300">
-                                    <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl mb-6 flex items-center justify-center">
+                        <div class="bg-black/30 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-purple-400/40 hover:shadow-xl hover:shadow-black/40 transition-all duration-500 hover:-translate-y-1">
+                                    <div class="w-16 h-16 bg-gradient-to-br from-slate-600 to-slate-800 rounded-xl mb-6 flex items-center justify-center">
                                         <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width=2 d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
                                         </svg>
@@ -348,8 +347,8 @@
                         </div>
 
                         <!-- Consulting Service -->
-                        <div class="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-8 hover:border-cyan-500/50 transition-all duration-300">
-                                    <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl mb-6 flex items-center justify-center">
+                        <div class="bg-black/30 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-emerald-400/40 hover:shadow-xl hover:shadow-black/40 transition-all duration-500 hover:-translate-y-1">
+                                    <div class="w-16 h-16 bg-gradient-to-br from-slate-700 to-slate-900 rounded-xl mb-6 flex items-center justify-center">
                                         <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width=2 d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                                         </svg>
@@ -388,8 +387,8 @@
                         </div>
 
                         <!-- Custom Solutions Service -->
-                        <div class="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-8 hover:border-cyan-500/50 transition-all duration-300">
-                                    <div class="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-xl mb-6 flex items-center justify-center">
+                        <div class="bg-black/30 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-orange-400/40 hover:shadow-xl hover:shadow-black/40 transition-all duration-500 hover:-translate-y-1">
+                                    <div class="w-16 h-16 bg-gradient-to-br from-slate-600 to-slate-800 rounded-xl mb-6 flex items-center justify-center">
                                         <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width=2 d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
                                         </svg>
@@ -466,11 +465,12 @@
                                     </div>
                                 </div>
                                 <div class="relative">
-                                    <div class="aspect-square rounded-2xl bg-gradient-to-br from-cyan-500/20 to-blue-500/20 backdrop-blur-sm border border-cyan-500/30 p-8 relative overflow-hidden">
-                                        <div class="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-transparent"></div>
+                                                    <div class="relative">
+                    <div class="aspect-square rounded-2xl bg-gradient-to-br from-black/30 to-slate-900/40 backdrop-blur-xl border border-white/10 p-8 relative overflow-hidden hover:border-cyan-400/30 transition-all duration-500 hover:shadow-2xl hover:shadow-black/50">
+                                        <div class="absolute inset-0 bg-gradient-to-br from-slate-600/10 to-transparent"></div>
                                         <div class="relative z-10 h-full flex items-center justify-center">
                                             <div class="text-center">
-                                                <div class="w-32 h-32 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-3xl mx-auto mb-6 flex items-center justify-center transform rotate-12 hover:rotate-0 transition-transform duration-500">
+                                                <div class="w-32 h-32 bg-gradient-to-br from-slate-700 to-slate-900 rounded-3xl mx-auto mb-6 flex items-center justify-center transform rotate-12 hover:rotate-0 transition-transform duration-500">
                                                     <span class="text-6xl">🚀</span>
                                                 </div>
                                                 <h3 class="text-2xl font-bold mb-3">Innovación constante</h3>
@@ -488,7 +488,8 @@
             <!-- Contact Section -->
             <section id="contacto" class="container mx-auto px-6 py-20">
                         <div class="max-w-4xl mx-auto">
-                            <div class="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/30 rounded-2xl p-8 lg:p-12">
+                                            <div class="max-w-4xl mx-auto">
+                    <div class="bg-gradient-to-br from-black/30 to-slate-900/40 backdrop-blur-xl border border-white/10 rounded-2xl p-8 lg:p-12 hover:border-cyan-400/30 hover:shadow-2xl hover:shadow-black/50 transition-all duration-500">
                                 <div class="text-center mb-12">
                                     <h2 class="text-4xl lg:text-5xl font-bold mb-4">
                                         ¿Listo para comenzar?
@@ -576,7 +577,7 @@
                             <div class="grid md:grid-cols-4 gap-8 mb-8">
                                 <div class="md:col-span-2">
                                     <div class="flex items-center space-x-2 mb-4">
-                                        <div class="w-10 h-10 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center">
+                                        <div class="w-10 h-10 bg-gradient-to-br from-slate-600 to-slate-800 rounded-lg flex items-center justify-center">
                                             <span class="text-white font-bold text-xl">H</span>
                                         </div>
                                         <span class="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
@@ -638,6 +639,41 @@
         <script src="//unpkg.com/alpinejs" defer></script>
         <style>
             [x-cloak] { display: none !important; }
+            
+            @keyframes fade-in {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+            
+            .animate-fade-in {
+                animation: fade-in 0.8s ease-out forwards;
+                opacity: 0;
+            }
+            
+            @keyframes float {
+                0%, 100% {
+                    transform: translateY(0px);
+                }
+                50% {
+                    transform: translateY(-10px);
+                }
+            }
+            
+            .animate-float {
+                animation: float 3s ease-in-out infinite;
+            }
+            
+            /* Frosted glass effect enhancement */
+            .backdrop-blur-xl {
+                backdrop-filter: blur(24px) saturate(180%);
+                -webkit-backdrop-filter: blur(24px) saturate(180%);
+            }
         </style>
     </body>
 </html>
