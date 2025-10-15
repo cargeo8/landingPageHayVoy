@@ -556,9 +556,12 @@
                                                 <div class="flex flex-wrap gap-3 justify-center mt-6">
                                                     <span class="px-3 py-1 bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-full text-xs text-cyan-400 hover:border-cyan-500/50 transition-colors cursor-default">Laravel</span>
                                                     <span class="px-3 py-1 bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-full text-xs text-blue-400 hover:border-blue-500/50 transition-colors cursor-default">React</span>
+                                                    <span class="px-3 py-1 bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-full text-xs text-red-400 hover:border-red-500/50 transition-colors cursor-default">Angular</span>
                                                     <span class="px-3 py-1 bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-full text-xs text-emerald-400 hover:border-emerald-500/50 transition-colors cursor-default">Vue.js</span>
-                                                    <span class="px-3 py-1 bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-full text-xs text-purple-400 hover:border-purple-500/50 transition-colors cursor-default">Alpine.js</span>
+                                                    <span class="px-3 py-1 bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-full text-xs text-purple-400 hover:border-purple-500/50 transition-colors cursor-default">.NET</span>
                                                     <span class="px-3 py-1 bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-full text-xs text-orange-400 hover:border-orange-500/50 transition-colors cursor-default">Tailwind</span>
+                                                    <span class="px-3 py-1 bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-full text-xs text-green-400 hover:border-green-500/50 transition-colors cursor-default">Android</span>
+                                                    <span class="px-3 py-1 bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-full text-xs text-slate-300 hover:border-slate-400/50 transition-colors cursor-default">iOS</span>
                                                 </div>
                                             </div>
                                         </div>
