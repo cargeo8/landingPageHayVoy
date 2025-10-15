@@ -65,8 +65,8 @@
             </div>
         </div>
 
-        <!-- Navigation (outside relative container for sticky to work) -->
-        <header class="sticky top-0 z-40 w-full">
+        <!-- Navigation (fixed at top to stay visible) -->
+        <header class="fixed top-0 left-0 right-0 z-40 w-full">
             <div class="container mx-auto px-6 py-6">
                 <nav class="flex items-center justify-between backdrop-blur-md bg-black/20 rounded-2xl px-6 py-4 border border-white/10 shadow-lg shadow-black/20 transition-all duration-300 hover:bg-black/30 hover:border-white/20">
                     <div class="flex items-center space-x-2">
