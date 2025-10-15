@@ -128,6 +128,150 @@
         </div>
     </div>
 
+    <!-- Business Intelligence - Sección Destacada -->
+    <div id="business-intelligence" class="mb-24 scroll-mt-32">
+        <div class="bg-gradient-to-br from-purple-900/50 to-pink-900/30 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-purple-500/20 shadow-2xl">
+            <div class="flex items-center gap-3 mb-6">
+                <span class="px-4 py-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-semibold">
+                    📊 Business Intelligence
+                </span>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                        <span class="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">Inteligencia de Negocios</span>
+                    </h2>
+                    <p class="text-xl text-gray-300 mb-8">
+                        Transforma tus datos en decisiones estratégicas. Implementamos soluciones de Business Intelligence que visualizan, analizan y predicen el comportamiento crítico de tu negocio.
+                    </p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-purple-500/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-semibold mb-2">Dashboards Interactivos</h4>
+                                <p class="text-gray-400 text-sm">Visualiza tus KPIs en tiempo real</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-purple-500/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-semibold mb-2">Análisis Predictivo</h4>
+                                <p class="text-gray-400 text-sm">Machine learning para proyecciones</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-purple-500/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-semibold mb-2">Reportes Automatizados</h4>
+                                <p class="text-gray-400 text-sm">Informes personalizados automáticos</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-purple-500/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-semibold mb-2">Integración de Datos</h4>
+                                <p class="text-gray-400 text-sm">Conecta múltiples fuentes de datos</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="flex -space-x-3">
+                            <div class="w-10 h-10 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full border-2 border-slate-900 flex items-center justify-center text-sm font-bold">BI</div>
+                            <div class="w-10 h-10 bg-gradient-to-br from-pink-500 to-rose-600 rounded-full border-2 border-slate-900 flex items-center justify-center text-sm font-bold">DW</div>
+                            <div class="w-10 h-10 bg-gradient-to-br from-violet-500 to-purple-600 rounded-full border-2 border-slate-900 flex items-center justify-center text-sm font-bold">ML</div>
+                        </div>
+                        <p class="text-gray-400">
+                            <span class="text-purple-400 font-semibold">Power BI, Tableau, Looker</span> y más herramientas líderes
+                        </p>
+                    </div>
+
+                    <a 
+                        href="{{ route('home') }}#contacto" 
+                        class="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl hover:from-purple-600 hover:to-pink-600 transition-all duration-300 shadow-lg hover:shadow-purple-500/50 font-semibold"
+                    >
+                        Consulta Gratuita
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="relative">
+                    <div class="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-2xl blur-3xl"></div>
+                    <div class="relative bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/20">
+                        <div class="space-y-6">
+                            <!-- Dashboard mockup -->
+                            <div class="bg-slate-900/50 rounded-xl p-4 border border-purple-500/20">
+                                <div class="flex items-center justify-between mb-4">
+                                    <div class="flex gap-2">
+                                        <div class="w-3 h-3 rounded-full bg-red-400"></div>
+                                        <div class="w-3 h-3 rounded-full bg-yellow-400"></div>
+                                        <div class="w-3 h-3 rounded-full bg-green-400"></div>
+                                    </div>
+                                    <span class="text-xs text-gray-500">Dashboard Ejecutivo</span>
+                                </div>
+                                <div class="grid grid-cols-2 gap-4 mb-4">
+                                    <div class="bg-purple-500/10 rounded-lg p-3 border border-purple-500/20">
+                                        <div class="text-xs text-gray-400 mb-1">Ventas</div>
+                                        <div class="text-lg font-bold text-purple-400">$125K</div>
+                                        <div class="text-xs text-emerald-400">↑ 12%</div>
+                                    </div>
+                                    <div class="bg-pink-500/10 rounded-lg p-3 border border-pink-500/20">
+                                        <div class="text-xs text-gray-400 mb-1">ROI</div>
+                                        <div class="text-lg font-bold text-pink-400">287%</div>
+                                        <div class="text-xs text-emerald-400">↑ 8%</div>
+                                    </div>
+                                </div>
+                                <div class="space-y-2">
+                                    <div class="h-2 bg-slate-700/50 rounded-full overflow-hidden">
+                                        <div class="h-full w-3/4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full"></div>
+                                    </div>
+                                    <div class="h-2 bg-slate-700/50 rounded-full overflow-hidden">
+                                        <div class="h-full w-1/2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full"></div>
+                                    </div>
+                                    <div class="h-2 bg-slate-700/50 rounded-full overflow-hidden">
+                                        <div class="h-full w-5/6 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Chart visualization -->
+                            <div class="flex items-end justify-between h-24 gap-2">
+                                <div class="w-full bg-gradient-to-t from-purple-500/50 to-purple-500/20 rounded-t-lg" style="height: 45%"></div>
+                                <div class="w-full bg-gradient-to-t from-purple-500/50 to-purple-500/20 rounded-t-lg" style="height: 70%"></div>
+                                <div class="w-full bg-gradient-to-t from-pink-500/50 to-pink-500/20 rounded-t-lg" style="height: 60%"></div>
+                                <div class="w-full bg-gradient-to-t from-pink-500/50 to-pink-500/20 rounded-t-lg" style="height: 85%"></div>
+                                <div class="w-full bg-gradient-to-t from-purple-500/50 to-purple-500/20 rounded-t-lg" style="height: 55%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Otros Servicios -->
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         <!-- Desarrollo Web -->
@@ -240,45 +384,6 @@
                 </li>
             </ul>
             <a href="{{ route('home') }}#contacto" class="text-cyan-400 hover:text-cyan-300 font-semibold flex items-center gap-2 group">
-                Más información
-                <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                </svg>
-            </a>
-        </div>
-
-        <!-- Business Intelligence -->
-        <div id="business-intelligence" class="bg-gradient-to-br from-slate-900/50 to-slate-800/30 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-purple-500/30 transition-all duration-300 group scroll-mt-32">
-            <div class="w-16 h-16 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <svg class="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
-                </svg>
-            </div>
-            <h3 class="text-2xl font-bold text-white mb-4">Business Intelligence</h3>
-            <p class="text-gray-400 mb-6">
-                Transforma tus datos en decisiones estratégicas. Implementamos soluciones de BI que visualizan y analizan la información crítica de tu negocio.
-            </p>
-            <ul class="space-y-3 mb-6">
-                <li class="flex items-center gap-3 text-gray-300">
-                    <svg class="w-5 h-5 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                    </svg>
-                    Dashboards interactivos
-                </li>
-                <li class="flex items-center gap-3 text-gray-300">
-                    <svg class="w-5 h-5 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                    </svg>
-                    Análisis predictivo
-                </li>
-                <li class="flex items-center gap-3 text-gray-300">
-                    <svg class="w-5 h-5 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                    </svg>
-                    Reportes automatizados
-                </li>
-            </ul>
-            <a href="{{ route('home') }}#contacto" class="text-purple-400 hover:text-purple-300 font-semibold flex items-center gap-2 group">
                 Más información
                 <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
