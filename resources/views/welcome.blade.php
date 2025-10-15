@@ -33,91 +33,85 @@
             <div class="absolute bottom-32 left-1/3 w-2 h-2 bg-purple-400/30 rounded-full animate-float" style="animation-delay: 2s;"></div>
         </div>
 
-        <div class="relative z-10">
-            <!-- Scroll Progress Bar -->
-            <div x-data="{ scrollProgress: 0 }" @scroll.window="scrollProgress = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100">
-                <div class="fixed top-0 left-0 right-0 h-1 bg-slate-800/50 z-50">
-                    <div class="h-full bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 transition-all duration-150" :style="`width: ${scrollProgress}%`"></div>
-                </div>
+        <!-- Scroll Progress Bar (fixed, outside relative container) -->
+        <div x-data="{ scrollProgress: 0 }" @scroll.window="scrollProgress = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100">
+            <div class="fixed top-0 left-0 right-0 h-1 bg-slate-800/50 z-50">
+                <div class="h-full bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 transition-all duration-150" :style="`width: ${scrollProgress}%`"></div>
             </div>
-            
-            <!-- Scroll Progress Bar -->
-            <div x-data="{ scrollProgress: 0 }" @scroll.window="scrollProgress = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100">
-                <div class="fixed top-0 left-0 right-0 h-1 bg-slate-800/50 z-50">
-                    <div class="h-full bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 transition-all duration-150" :style="`width: ${scrollProgress}%`"></div>
-                </div>
-            </div>
-            
-            <!-- Sticky CTA Flotante -->
-            <div x-data="{ showStickyCTA: false }" @scroll.window="showStickyCTA = window.scrollY > 800">
-                <div 
-                    x-show="showStickyCTA"
-                    x-transition:enter="transition ease-out duration-300"
-                    x-transition:enter-start="opacity-0 translate-y-4"
-                    x-transition:enter-end="opacity-100 translate-y-0"
-                    x-transition:leave="transition ease-in duration-200"
-                    x-transition:leave-start="opacity-100 translate-y-0"
-                    x-transition:leave-end="opacity-0 translate-y-4"
-                    class="fixed bottom-8 right-8 z-50"
-                    x-cloak
+        </div>
+        
+        <!-- Sticky CTA Flotante (fixed, outside relative container) -->
+        <div x-data="{ showStickyCTA: false }" @scroll.window="showStickyCTA = window.scrollY > 800">
+            <div 
+                x-show="showStickyCTA"
+                x-transition:enter="transition ease-out duration-300"
+                x-transition:enter-start="opacity-0 translate-y-4"
+                x-transition:enter-end="opacity-100 translate-y-0"
+                x-transition:leave="transition ease-in duration-200"
+                x-transition:leave-start="opacity-100 translate-y-0"
+                x-transition:leave-end="opacity-0 translate-y-4"
+                class="fixed bottom-8 right-8 z-50"
+                x-cloak
+            >
+                <a 
+                    href="#contacto" 
+                    class="group flex items-center gap-3 px-6 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full shadow-2xl hover:shadow-cyan-500/50 transition-all duration-300 hover:scale-110"
                 >
-                    <a 
-                        href="#contacto" 
-                        class="group flex items-center gap-3 px-6 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full shadow-2xl hover:shadow-cyan-500/50 transition-all duration-300 hover:scale-110"
-                    >
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
-                        </svg>
-                        <span class="font-semibold whitespace-nowrap">¡Hablemos!</span>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+                    </svg>
+                    <span class="font-semibold whitespace-nowrap">¡Hablemos!</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Navigation (outside relative container for sticky to work) -->
+        <header class="sticky top-0 z-40 w-full">
+            <div class="container mx-auto px-6 py-6">
+                <nav class="flex items-center justify-between backdrop-blur-md bg-black/20 rounded-2xl px-6 py-4 border border-white/10 shadow-lg shadow-black/20 transition-all duration-300 hover:bg-black/30 hover:border-white/20">
+                    <div class="flex items-center space-x-2">
+                        <div class="w-10 h-10 bg-gradient-to-br from-slate-600 to-slate-800 rounded-lg flex items-center justify-center animate-float">
+                            <span class="text-white font-bold text-xl">H</span>
+                        </div>
+                        <span class="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                            hayvoy
+                        </span>
+                    </div>
+                    
+                    <div class="hidden md:flex items-center space-x-8">
+                        <a href="#servicios" class="text-gray-300 hover:text-white transition-colors">
+                            Servicios
+                    </a>
+                    <a href="#about" class="text-gray-300 hover:text-white transition-colors">
+                        Nosotros
+                    </a>
+                    <a href="#contacto" class="text-gray-300 hover:text-white transition-colors">
+                        Contacto
                     </a>
                 </div>
-            </div>
-            
-            <!-- Navigation -->
-            <header class="sticky top-0 z-40 w-full">
-                <div class="container mx-auto px-6 py-6">
-                    <nav class="flex items-center justify-between backdrop-blur-md bg-black/20 rounded-2xl px-6 py-4 border border-white/10 shadow-lg shadow-black/20 transition-all duration-300 hover:bg-black/30 hover:border-white/20">
-                        <div class="flex items-center space-x-2">
-                            <div class="w-10 h-10 bg-gradient-to-br from-slate-600 to-slate-800 rounded-lg flex items-center justify-center animate-float">
-                                <span class="text-white font-bold text-xl">H</span>
-                            </div>
-                            <span class="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                                hayvoy
-                            </span>
-                        </div>
-                        
-                        <div class="hidden md:flex items-center space-x-8">
-                            <a href="#servicios" class="text-gray-300 hover:text-white transition-colors">
-                                Servicios
-                        </a>
-                        <a href="#about" class="text-gray-300 hover:text-white transition-colors">
-                            Nosotros
-                        </a>
-                        <a href="#contacto" class="text-gray-300 hover:text-white transition-colors">
-                            Contacto
-                        </a>
-                    </div>
 
-                    <div class="flex items-center space-x-4">
-                        @auth
-                            <a
-                                href="{{ route('dashboard') }}"
-                                class="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 shadow-lg hover:shadow-cyan-500/50"
-                            >
-                                Dashboard
-                            </a>
-                        @else
-                            <a
-                                href="#contacto"
-                                class="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 shadow-lg hover:shadow-cyan-500/50"
-                            >
-                                Hablemos
-                            </a>
-                        @endauth
-                    </div>
-                </nav>
+                <div class="flex items-center space-x-4">
+                    @auth
+                        <a
+                            href="{{ route('dashboard') }}"
+                            class="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 shadow-lg hover:shadow-cyan-500/50"
+                        >
+                            Dashboard
+                        </a>
+                    @else
+                        <a
+                            href="#contacto"
+                            class="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 shadow-lg hover:shadow-cyan-500/50"
+                        >
+                            Hablemos
+                        </a>
+                    @endauth
                 </div>
-            </header>
+            </nav>
+            </div>
+        </header>
+
+        <div class="relative z-10">
 
             <!-- Hero Section -->
             <section class="container mx-auto px-6 py-20 lg:py-32">
