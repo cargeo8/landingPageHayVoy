@@ -18,15 +18,36 @@
 </head>
 <body>
     <div class="bg-gradient-to-br from-slate-950 via-slate-900 to-black text-white min-h-screen relative overflow-hidden">
-        <!-- Animated Background Elements -->
+        <!-- Animated Background Elements with Mesh Gradients -->
         <div class="absolute inset-0 overflow-hidden pointer-events-none">
-            <div class="absolute top-0 left-1/4 w-96 h-96 bg-slate-700/5 rounded-full blur-3xl animate-pulse"></div>
-            <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-slate-600/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
-            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] border border-cyan-500/10 rounded-full"></div>
-            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] border border-cyan-500/10 rounded-full"></div>
+            <!-- Mesh gradient orbs -->
+            <div class="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-br from-cyan-500/10 via-blue-500/5 to-transparent rounded-full blur-3xl animate-pulse animate-float-slow"></div>
+            <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-gradient-to-tl from-purple-500/10 via-slate-600/5 to-transparent rounded-full blur-3xl animate-pulse delay-1000"></div>
+            <div class="absolute top-1/3 right-1/3 w-64 h-64 bg-gradient-to-br from-emerald-500/5 to-transparent rounded-full blur-2xl animate-pulse" style="animation-delay: 2s;"></div>
+            <!-- Geometric circles -->
+            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] border border-cyan-500/10 rounded-full animate-spin-slow"></div>
+            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] border border-cyan-500/10 rounded-full animate-spin-reverse"></div>
+            <!-- Floating particles -->
+            <div class="absolute top-20 left-20 w-2 h-2 bg-cyan-400/30 rounded-full animate-float"></div>
+            <div class="absolute top-40 right-40 w-3 h-3 bg-blue-400/20 rounded-full animate-float" style="animation-delay: 1s;"></div>
+            <div class="absolute bottom-32 left-1/3 w-2 h-2 bg-purple-400/30 rounded-full animate-float" style="animation-delay: 2s;"></div>
         </div>
 
         <div class="relative z-10">
+            <!-- Scroll Progress Bar -->
+            <div x-data="{ scrollProgress: 0 }" @scroll.window="scrollProgress = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100">
+                <div class="fixed top-0 left-0 right-0 h-1 bg-slate-800/50 z-50">
+                    <div class="h-full bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 transition-all duration-150" :style="`width: ${scrollProgress}%`"></div>
+                </div>
+            </div>
+            
+            <!-- Scroll Progress Bar -->
+            <div x-data="{ scrollProgress: 0 }" @scroll.window="scrollProgress = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100">
+                <div class="fixed top-0 left-0 right-0 h-1 bg-slate-800/50 z-50">
+                    <div class="h-full bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 transition-all duration-150" :style="`width: ${scrollProgress}%`"></div>
+                </div>
+            </div>
+            
             <!-- Sticky CTA Flotante -->
             <div x-data="{ showStickyCTA: false }" @scroll.window="showStickyCTA = window.scrollY > 800">
                 <div 
@@ -131,6 +152,7 @@
                             class="group px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 text-lg font-semibold relative overflow-hidden hover:scale-105"
                         >
                             <span class="absolute inset-0 bg-gradient-to-r from-blue-500 to-cyan-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                            <span class="absolute inset-0 animate-shimmer"></span>
                             <span class="relative">Comencemos</span>
                             <span class="relative inline-block ml-2 group-hover:translate-x-1 transition-transform">→</span>
                         </a>
@@ -224,11 +246,12 @@
                     <div class="grid gap-8 lg:grid-cols-2">
                         <!-- CollectHub - Featured Service -->
                         <div class="lg:col-span-2 bg-gradient-to-br from-black/30 via-slate-900/30 to-black/40 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-8 lg:p-12 hover:border-cyan-400/40 hover:shadow-2xl hover:shadow-black/50 transition-all duration-500 relative overflow-hidden group animate-fade-in">
-                            <div class="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                            <!-- Animated background glow -->
+                            <div class="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                             <div class="relative z-10">
                                 <div class="flex items-start justify-between mb-6">
                                     <div class="flex-1">
-                                        <div class="inline-block px-4 py-1 bg-cyan-500/20 border border-cyan-500/40 rounded-full text-cyan-400 text-sm mb-4">
+                                        <div class="inline-block px-4 py-1 bg-cyan-500/20 border border-cyan-500/40 rounded-full text-cyan-400 text-sm mb-4 animate-pulse-subtle">
                                             ⭐ Producto Destacado
                                         </div>
                                         <h3 class="text-3xl lg:text-4xl font-bold mb-4 flex items-center">
@@ -303,6 +326,16 @@
                                             Acceder al Sistema
                                         </a>
                                     @endauth
+                                </div>
+                                
+                                <!-- Mini Testimonial / Social Proof -->
+                                <div class="mt-8 pt-6 border-t border-slate-700/50 flex items-center gap-4">
+                                    <div class="flex -space-x-2">
+                                        <div class="w-8 h-8 rounded-full bg-gradient-to-br from-cyan-400 to-blue-500 border-2 border-slate-900 flex items-center justify-center text-xs font-bold">JD</div>
+                                        <div class="w-8 h-8 rounded-full bg-gradient-to-br from-purple-400 to-pink-500 border-2 border-slate-900 flex items-center justify-center text-xs font-bold">MC</div>
+                                        <div class="w-8 h-8 rounded-full bg-gradient-to-br from-emerald-400 to-teal-500 border-2 border-slate-900 flex items-center justify-center text-xs font-bold">AR</div>
+                                    </div>
+                                    <p class="text-sm text-gray-400"><span class="text-cyan-400 font-semibold">10+ empresas</span> ya optimizan sus cobranzas con CollectHub</p>
                                 </div>
                             </div>
                         </div>
@@ -515,9 +548,18 @@
                                                     <span class="text-6xl">🚀</span>
                                                 </div>
                                                 <h3 class="text-2xl font-bold mb-3">Innovación constante</h3>
-                                                <p class="text-gray-400">
+                                                <p class="text-gray-400 mb-6">
                                                     Siempre a la vanguardia de la tecnología
                                                 </p>
+                                                
+                                                <!-- Tech Stack Badges -->
+                                                <div class="flex flex-wrap gap-3 justify-center mt-6">
+                                                    <span class="px-3 py-1 bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-full text-xs text-cyan-400 hover:border-cyan-500/50 transition-colors cursor-default">Laravel</span>
+                                                    <span class="px-3 py-1 bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-full text-xs text-blue-400 hover:border-blue-500/50 transition-colors cursor-default">React</span>
+                                                    <span class="px-3 py-1 bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-full text-xs text-emerald-400 hover:border-emerald-500/50 transition-colors cursor-default">Vue.js</span>
+                                                    <span class="px-3 py-1 bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-full text-xs text-purple-400 hover:border-purple-500/50 transition-colors cursor-default">Alpine.js</span>
+                                                    <span class="px-3 py-1 bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-full text-xs text-orange-400 hover:border-orange-500/50 transition-colors cursor-default">Tailwind</span>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -737,7 +779,83 @@
             .animate-pulse-subtle {
                 animation: pulse-subtle 2s ease-in-out infinite;
             }
-                animation: float 3s ease-in-out infinite;
+            
+            @keyframes float-slow {
+                0%, 100% {
+                    transform: translate(0, 0);
+                }
+                33% {
+                    transform: translate(30px, -30px);
+                }
+                66% {
+                    transform: translate(-20px, 20px);
+                }
+            }
+            
+            .animate-float-slow {
+                animation: float-slow 20s ease-in-out infinite;
+            }
+            
+            @keyframes spin-slow {
+                from {
+                    transform: translate(-50%, -50%) rotate(0deg);
+                }
+                to {
+                    transform: translate(-50%, -50%) rotate(360deg);
+                }
+            }
+            
+            .animate-spin-slow {
+                animation: spin-slow 30s linear infinite;
+            }
+            
+            @keyframes spin-reverse {
+                from {
+                    transform: translate(-50%, -50%) rotate(360deg);
+                }
+                to {
+                    transform: translate(-50%, -50%) rotate(0deg);
+                }
+            }
+            
+            .animate-spin-reverse {
+                animation: spin-reverse 25s linear infinite;
+            }
+            
+            @keyframes shimmer {
+                0% {
+                    background-position: -1000px 0;
+                }
+                100% {
+                    background-position: 1000px 0;
+                }
+            }
+            
+            .animate-shimmer {
+                background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+                background-size: 1000px 100%;
+                animation: shimmer 3s infinite;
+            }
+            
+            /* Accessibility - Respect reduced motion preference */
+            @media (prefers-reduced-motion: reduce) {
+                *,
+                *::before,
+                *::after {
+                    animation-duration: 0.01ms !important;
+                    animation-iteration-count: 1 !important;
+                    transition-duration: 0.01ms !important;
+                }
+                
+                .animate-pulse,
+                .animate-float,
+                .animate-spin-slow,
+                .animate-spin-reverse,
+                .animate-shimmer,
+                .animate-gradient,
+                .animate-float-slow {
+                    animation: none !important;
+                }
             }
             
             /* Frosted glass effect enhancement */
